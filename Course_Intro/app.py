@@ -29,34 +29,40 @@ st.info('Information !')                    # Info
 st.warning('Warning !')                     # Warning
 st.error('Error !')                         # Error
 st.exception(ZeroDivisionError('Div not possible'))           #Exception
-
+#st.toast('This is a temporary message!')
+# with st.spinner('Loading...'):              #Loading
+#     import time
+#     time.sleep(3)
+# st.success('Done!')
 
 
 st.subheader('HELP')
 st.help(ZeroDivisionError)
-st.help(ValueError)
+#st.help(ValueError)
 
 st.write("range(1,10)")
 st.write(range(1,10))
 st.write('1+2+3')
 st.write(1+2+3)
-st.write(3*3)
 st.write("# Heading 1")
 st.write("## Heading 2")
 st.write("**Bold Text** and _Italic Text_")
 st.write("[Google](https://www.google.com)")  # Displays a hyperlink
 
+st.subheader('CODE')
+st.code('x=10\nfor i in range(x):\n\tprint(i)')  #Code
 
-data = {"Name": ["Alice", "Bob"], "Age": [25, 30]}
-df = pd.DataFrame(data)
+st.subheader('Checkbox:')               #Checkbox
+st.checkbox('Male')
+if(st.checkbox('Adult')):
+    st.write('You are an adult')
 
-st.write(df)  # Automatically renders as a table
-
-
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-fig, ax = plt.subplots()
-ax.plot(x, y)
-
-st.write(fig)  # Displays the Matplotlib chart
+st.subheader('Radio Button')                #RadioButton
+st.radio('Select: ',('Check','Uncheck'))
+button = st.radio('Gender: ',('Male','Female','Other'))
+if(button == 'Male'):
+    st.write('You are Male')
+elif(button == 'Female'):
+    st.write('You are Female')
+else:
+    st.write('You are Others')    
