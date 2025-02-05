@@ -13,3 +13,9 @@ st.markdown('#### Hi')
 st.markdown('##### Hi')
 st.markdown('Hi')
 
+st.success('Success !')                 # Success
+st.info('Information !')                    # Info
+st.warning('Warning !')                     # Warning
+st.error('Error !')                         # Error
+
+
