@@ -106,6 +106,14 @@ st.date_input('Date')
 st.subheader("Input Time")                              # Input-Time
 st.time_input('Time')
 
+with st.form(key='user_form'):
+    age = st.number_input('Age', min_value=18, max_value=110, value=25)
+    selected_date = st.date_input('Select a date')
+    selected_time = st.time_input('Select a time')
+    submit_button = st.form_submit_button('Submit')
+
+if submit_button:
+    st.write(f'Age: {age}, Date: {selected_date}, Time: {selected_time}')
 
 
 
