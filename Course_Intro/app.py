@@ -66,3 +66,39 @@ elif(button == 'Female'):
     st.write('You are Female')
 else:
     st.write('You are Others')    
+
+
+st.subheader('Select Box')                     #SelectBox
+SelectBox = st.selectbox("Data Science :",['Data Analayis','Web Scrapping',
+                                        'Machine learning','Deep learngin',
+                                        'NLP','Stats','Computer Vision'])
+st.write("You have selected",SelectBox)
+
+st.subheader('MultiSelect Box')                     #MultiSelectBox
+MultiSelBox = st.multiselect("Data Science :",['Data Analayis','Web Scrapping',
+                                        'Machine learning','Deep learngin',
+                                        'NLP','Stats','Computer Vision'])
+st.write("You have selected: ",len(MultiSelBox),"Courses")
+
+st.subheader("BUTTON")                          #Button
+if(st.button('BClick me')):
+    st.write('Thanks for clicking me')
+
+st.subheader('Slider')                          # SLider
+volume = st.slider('Select the Volume',1,100,step=1)
+st.write('Volume is: ',volume)
+
+st.subheader('Text Input')                      #Text Input
+username = st.text_input('Name : ')
+password = st.text_input('Pass : ',type = 'password')
+
+st.subheader('Text Area')                       #Text area
+textarea = st.text_area('Write about yourself in 500 words:')
+st.write(textarea)
+
+
+
+
+
+
+
