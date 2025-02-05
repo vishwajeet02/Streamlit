@@ -11,17 +11,26 @@ st.text('Text  ->  Geeks for Geeks')                #Text
 
 # Markdown
 st.markdown('# Hi')             
-st.markdown('## Hi')
-st.markdown('### Hi')
-st.markdown('#### Hi')
-st.markdown('##### Hi')
+# st.markdown('## Hi')
+# st.markdown('### Hi')
+# st.markdown('#### Hi')
+# st.markdown('##### Hi')
 st.markdown('Hi')
+st.markdown("**Bold Text**")
+st.markdown("_Italic Text_")
+st.markdown("***Bold & Italic***")
+st.markdown("- Item 1\n- Item 2\n- Item 3")  # Bullets
+st.markdown("1. First\n2. Second\n3. Third")  # Numbered list
+st.markdown("[Visit GeeksforGeeks](https://www.geeksforgeeks.org)")
+#st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)")
 
 st.success('Success !')                 # Success
 st.info('Information !')                    # Info
 st.warning('Warning !')                     # Warning
 st.error('Error !')                         # Error
 st.exception(ZeroDivisionError('Div not possible'))           #Exception
+
+
 
 st.subheader('HELP')
 st.help(ZeroDivisionError)
