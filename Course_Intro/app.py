@@ -93,10 +93,18 @@ username = st.text_input('Name : ')
 password = st.text_input('Pass : ',type = 'password')
 
 st.subheader('Text Area')                       #Text area
-textarea = st.text_area('Write about yourself in 500 words:')
+textarea = st.text_area('Write about yourself in 20 words:',max_chars = 20)
 st.write(textarea)
 
 
+st.subheader("Input Number")                           # Input-Number
+st.number_input('Select your age',18,110)
+
+st.subheader("Input Date")                              # Input-Date
+st.date_input('Date')
+
+st.subheader("Input Time")                              # Input-Time
+st.time_input('Time')
 
 
 
