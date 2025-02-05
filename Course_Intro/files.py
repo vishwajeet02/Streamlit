@@ -3,9 +3,9 @@ import pandas as pd
 
 st.subheader('Uploading the CSV File')
 df = st.file_uploader("Upload the CSV file:",type = ['csv','xlsx'])
-
-# if df:
-#     st.dataframe(df)
+if df is not None:
+    df = pd.read_csv(df)
+    st.table(df.head())
 
 st.subheader('Loading the CSV File')
 df = pd.read_csv('Products.csv')
